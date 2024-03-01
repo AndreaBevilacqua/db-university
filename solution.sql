@@ -7,6 +7,8 @@ SELECT * FROM `students` WHERE YEAR(`date_of_birth`) = 1990;
 SELECT `name`, `cfu` FROM `courses` WHERE `cfu` > 10;
 
 -- 3. Selezionare tutti gli studenti che hanno più di 30 anni
+SELECT `name`, `surname`, `date_of_birth` FROM `students` WHERE YEAR(CURDATE()) - YEAR(`date_of_birth`) > 30;
+
 -- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
 -- laurea (286)
 -- 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del
