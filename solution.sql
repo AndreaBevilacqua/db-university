@@ -43,6 +43,7 @@ SELECT `department_id`, COUNT(*) FROM `degrees` GROUP BY `department_id`;
 -- ? ESERCIZI INNJER JOIN
 
 -- 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+SELECT S.`id`, S.`name`,D.`name` FROM `students` AS S JOIN `degrees` AS D ON S.`degree_id` = D.id WHERE D.`name` = 'Corso di Laurea in Economia';
 
 -- 2. Selezionare tutti i Corsi di Laurea del Dipartimento di Neuroscienze
 -- 3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
